@@ -58,6 +58,9 @@ def ear(text):
 
 def call(path, body=None):
     key = os.environ.get("ELEVENLABS_API_KEY") or sys.exit("speech: there is no ElevenLabs key; run razor keys to add one.")
+    if BASE.startswith("https:") and not hasattr(urllib.request, "HTTPSHandler"):
+        sys.exit(f"speech: {sys.executable} has no working SSL module, so it can't reach ElevenLabs; "
+                 "set speech in config.toml to run a Python that has one.")
     headers = {"xi-api-key": key, "Content-Type": "application/json"}
     data = None if body is None else json.dumps(body).encode()
     with urllib.request.urlopen(urllib.request.Request(BASE + path, data, headers), timeout=60) as answer:

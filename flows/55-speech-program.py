@@ -54,6 +54,10 @@ try:
         words = Path(folder)/"speech/1.json"
         env = {**os.environ,"ELEVENLABS_API_KEY":"flow-key","ELEVENLABS_BASE_URL":f"http://127.0.0.1:{vendor.server_port}",
                "RAZOR_VOICE":"chosen","RAZOR_GAIN_DB":"9.5","RAZOR_EXPRESSIVENESS":"0.2","RAZOR_WORDS":str(words)}
+        no_ssl = "import runpy,sys; sys.modules['ssl'] = None; sys.argv = sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')"
+        unsafe = subprocess.run([sys.executable,"-c",no_ssl,str(program)],input=b"hello",
+                                env={**env,"ELEVENLABS_BASE_URL":"https://api.elevenlabs.invalid"},capture_output=True)
+        assert unsafe.returncode == 1 and b"has no working SSL module" in unsafe.stderr,unsafe.stderr
         listed = subprocess.run([sys.executable,str(program),"--voices"],env=env,capture_output=True,check=True)
         assert json.loads(listed.stdout) == [{"id":"iris","name":"Iris","description":"","preview_url":None,"labels":{"accent":"American"}}]
         text = "[excited] Hello. https://example.invalid /tmp/private `x=2` abcdef0123 [pleased] [loud]"
