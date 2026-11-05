@@ -1,0 +1,13 @@
+[
+{"builtin": "Read"},
+{"builtin": "Edit"},
+{"builtin": "Write"},
+{"builtin": "Bash", "to": "bash"},
+{"name": "bash", "description": "The same shell as Bash. Call Bash.", "inputSchema": {"type": "object"}},
+{"builtin": "TaskStop", "to": "kill"},
+{"name": "monitor", "description": "Run a shell command as a background job and return its handle at once. Nothing arrives while it runs; when it exits, a notice says how it ended and points to its output file. Use a command that exits when the condition holds, for example `until grep -q READY app.log; do sleep 1; done`. timeout_ms (default 300000, at most 1800000) stops it.", "inputSchema": {"type": "object", "properties": {"command": {"type": "string"}, "description": {"type": "string", "description": "A few words naming what it waits for; the notice repeats them."}, "timeout_ms": {"type": "integer"}}, "required": ["command"], "additionalProperties": false}},
+{"builtin": "WebSearch"},
+{"builtin": "WebFetch"},
+{"name": "kill", "description": "The same job stop as TaskStop. Call TaskStop.", "inputSchema": {"type": "object", "properties": {"task_id": {"type": "string"}, "shell_id": {"type": "string"}}, "required": []}},
+{"name": "terminal", "description": "Run a program under a real terminal (40 rows by 120 columns), or drive a job this session started. With command, start the program and return its screen. With job, first type one of text, key, or secret_file (a host-side UTF-8 file); the record holds only the path, never the file's secret bytes. Then wait for pattern on the screen, quiet_ms without a screen change, the program's end, or timeout_ms (default 10000). With job alone, return the current screen immediately. A job id is job-N or its number. A job started by Bash can also be waited on here, using its plain output. Results give a status line (job id, running or how it ended, and the zero-based terminal cursor), followed by the screen rows or plain output; long output names its whole file.\n", "inputSchema": {"type": "object", "properties": {"command": {"type": "string"}, "job": {"type": ["string", "integer"]}, "text": {"type": "string"}, "key": {"type": "string"}, "secret_file": {"type": "string"}, "pattern": {"type": "string"}, "quiet_ms": {"type": "integer"}, "timeout_ms": {"type": "integer"}}}}
+]

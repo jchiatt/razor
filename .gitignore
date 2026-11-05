@@ -1,0 +1,13 @@
+/target/
+node_modules/
+.beads-credential-key
+.beads/proxieddb/
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+*.gate.lock*
+__pycache__/
+
+# Local vendor docs cache
+/references/

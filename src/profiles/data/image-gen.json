@@ -1,0 +1,31 @@
+{
+  "heading": "## image_gen\nTools in the image_gen namespace.",
+  "input": {
+    "type": "object",
+    "properties": {
+      "prompt": {
+        "type": "string"
+      },
+      "transparent_background": {
+        "type": "boolean",
+        "description": "Whether the output should have a transparent background. Defaults to false."
+      },
+      "referenced_image_paths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 5
+      },
+      "num_last_images_to_include": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      }
+    },
+    "required": [
+      "prompt"
+    ],
+    "additionalProperties": false
+  }
+}

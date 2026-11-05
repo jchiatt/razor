@@ -1,0 +1,16 @@
+{
+  "opening": "MCP servers; use razor mcp list, add <name> --scope global|project|private --config '<JSON>', remove|enable|disable <name> --scope <scope>, reconnect|sign-in|sign-out <name>, import <file> --scope <scope>, or complete '<redirect address>' in bash to manage them.",
+  "server": "- {name}: {purpose} ({count} tools; {state}).",
+  "availability": "MCP availability changed; these are the configured servers now:\n{servers}",
+  "availability_empty": "No MCP server remains configured; its previously offered tools now refuse.",
+  "sign_in": "Sign in to {name}: {url}; if the browser then lands on a page that does not load, answer this with that page's address.",
+  "form": "The MCP server {name} asks: {message}\nFields: {fields}\nAnswer with one JSON object matching these fields, or decline or cancel.",
+  "url": "The MCP server {name} asks: {message}\nOpen {url} ({host}) to enter the information there, then accept, decline or cancel.",
+  "signed_in": "MCP sign-in completed.",
+  "invalid_form": "The answer does not fit this MCP form; answer with a JSON object matching its fields.",
+  "accept": "accept",
+  "decline": "decline",
+  "cancel": "cancel",
+  "elicitation_invalid_url": "The MCP server supplied an invalid link; ask it for an HTTP or HTTPS address.",
+  "elicitation_unsupported": "This MCP question format is unsupported; use a form or a link instead."
+}

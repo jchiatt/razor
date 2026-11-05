@@ -1,0 +1,2 @@
+# Preserve wire bytes; the blank line ending the last SSE event is required.
+*.sse -text whitespace=-blank-at-eof

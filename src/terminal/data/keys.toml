@@ -1,0 +1,373 @@
+[keys.global]
+"quit" = ["Ctrl-C"]
+"record" = ["Ctrl-R"]
+"new" = ["Ctrl-S"]
+"emoji" = ["Ctrl-G"]
+"stop" = ["Ctrl-X"]
+"status" = ["Ctrl-T"]
+"copy" = ["Ctrl-Shift-C", "Super-C"]
+"cut" = ["Ctrl-Shift-X", "Super-X"]
+"prefix" = []
+
+[keys.transcript]
+"page_up" = ["PageUp", "Shift-PageUp"]
+"page_down" = ["PageDown", "Shift-PageDown"]
+"top" = ["Ctrl-Home"]
+"bottom" = ["Ctrl-End"]
+"expand" = ["Ctrl-O"]
+
+[keys.list]
+"close" = ["Esc"]
+"up" = ["Up", "k"]
+"down" = ["Down", "j"]
+"left" = ["Left", "h"]
+"right" = ["Right", "l"]
+"accept" = ["Enter"]
+"fold" = ["Space"]
+"thread" = ["n"]
+"wider" = [">"]
+"narrower" = ["<"]
+"open" = ["F2"]
+
+[keys.prefix]
+"next_project" = ["n"]
+"previous_project" = ["p"]
+"left" = ["h"]
+"down" = ["j"]
+"up" = ["k"]
+"right" = ["l"]
+"cancel" = ["Esc"]
+
+[keys.composer]
+"send" = ["Enter"]
+"back" = ["Esc"]
+
+[keys.line_start]
+"list" = ["Left"]
+
+[keys.targets]
+"next" = ["Tab"]
+"previous" = ["BackTab"]
+"down" = ["Down"]
+"up" = ["Up"]
+
+[keys.children]
+"next" = ["Ctrl-N"]
+"previous" = ["Ctrl-P"]
+
+[keys.input_history]
+"previous" = ["Up"]
+"next" = ["Down"]
+
+[keys.queued_input]
+"take_back" = ["Up"]
+
+[keys.attached_images]
+"focus" = ["Up"]
+
+[keys.question]
+"previous" = ["Left"]
+"next" = ["Right"]
+"1" = ["1"]
+"2" = ["2"]
+"3" = ["3"]
+"4" = ["4"]
+"5" = ["5"]
+"6" = ["6"]
+"7" = ["7"]
+"8" = ["8"]
+"9" = ["9"]
+
+[keys.voice]
+"accept" = ["Enter"]
+"cancel" = ["Esc"]
+
+[keys.picker]
+"speed" = ["Tab"]
+"up" = ["Up"]
+"down" = ["Down"]
+"left" = ["Left"]
+"right" = ["Right"]
+"accept" = ["Enter"]
+"cancel" = ["Esc"]
+"keep" = ["1"]
+"handover" = ["2"]
+
+[keys.panel]
+"up" = ["Up"]
+"down" = ["Down"]
+"page_up" = ["PageUp", "Shift-PageUp"]
+"page_down" = ["PageDown", "Shift-PageDown"]
+"top" = ["Home"]
+"bottom" = ["End"]
+"cancel" = ["Esc"]
+
+[keys.mcp]
+"up" = ["Up"]
+"down" = ["Down"]
+"accept" = ["Enter"]
+"cancel" = ["Esc"]
+"sign_in" = ["s"]
+"sign_out" = ["o"]
+"reconnect" = ["r"]
+"disable" = ["d"]
+"enable" = ["e"]
+"remove" = ["x"]
+
+[keys.start]
+"up" = ["Up"]
+"down" = ["Down"]
+"left" = ["Left"]
+"right" = ["Right"]
+"accept" = ["Enter"]
+"cancel" = ["Esc"]
+"erase" = ["Backspace", "Shift-Backspace"]
+
+[keys.emoji]
+"up" = ["Up"]
+"down" = ["Down"]
+"left" = ["Left"]
+"right" = ["Right"]
+"previous_tab" = ["PageUp"]
+"next_tab" = ["PageDown"]
+"accept" = ["Enter"]
+"cancel" = ["Esc"]
+"close" = ["Ctrl-C", "Ctrl-G"]
+"tones" = ["Tab"]
+"erase" = ["Backspace", "Shift-Backspace"]
+"delete" = ["Delete"]
+"clear" = ["Ctrl-U"]
+
+[keys.completion]
+"up" = ["Up"]
+"down" = ["Down"]
+"accept" = ["Tab"]
+"enter" = ["Enter"]
+"space" = ["Space"]
+"cancel" = ["Esc"]
+
+[keys.shortcode]
+"accept" = ["Tab"]
+"enter" = ["Enter"]
+"close" = [":"]
+"cancel" = ["Esc"]
+
+[keys.attachments]
+"left" = ["Left"]
+"right" = ["Right"]
+"remove" = ["Backspace", "Delete"]
+"cancel" = ["Esc", "Down"]
+
+[keys.editor]
+"left" = ["Left", "Ctrl-B"]
+"right" = ["Right", "Ctrl-F"]
+"up" = ["Up", "Ctrl-Up", "Alt-Up"]
+"down" = ["Down", "Ctrl-Down", "Alt-Down"]
+"word_left" = ["Ctrl-Left", "Alt-Left", "Alt-B"]
+"word_right" = ["Ctrl-Right", "Alt-Right", "Alt-F"]
+"line_start" = ["Home"]
+"line_end" = ["End", "Ctrl-E"]
+"visual_start" = ["Super-Left", "Alt-A"]
+"visual_end" = ["Super-Right", "Alt-E"]
+"start" = ["Super-Up"]
+"end" = ["Super-Down"]
+"select_all" = ["Ctrl-A", "Super-A", "Ctrl-Shift-A", "Super-Shift-A"]
+"select_left" = ["Shift-Left", "Ctrl-Shift-B"]
+"select_right" = ["Shift-Right", "Ctrl-Shift-F"]
+"select_up" = ["Shift-Up", "Ctrl-Shift-Up", "Alt-Shift-Up"]
+"select_down" = ["Shift-Down", "Ctrl-Shift-Down", "Alt-Shift-Down"]
+"select_word_left" = ["Ctrl-Shift-Left", "Alt-Shift-Left", "Alt-Shift-B"]
+"select_word_right" = ["Ctrl-Shift-Right", "Alt-Shift-Right", "Alt-Shift-F"]
+"select_line_start" = ["Shift-Home"]
+"select_line_end" = ["Shift-End", "Ctrl-Shift-E"]
+"select_visual_start" = ["Super-Shift-Left", "Alt-Shift-A"]
+"select_visual_end" = ["Super-Shift-Right", "Alt-Shift-E"]
+"select_start" = ["Super-Shift-Up"]
+"select_end" = ["Super-Shift-Down"]
+"erase" = ["Backspace", "Shift-Backspace"]
+"delete" = ["Delete", "Shift-Delete", "Ctrl-D"]
+"erase_word" = ["Ctrl-Backspace", "Alt-Backspace", "Ctrl-W", "Ctrl-Shift-Backspace", "Alt-Shift-Backspace"]
+"delete_word" = ["Ctrl-Delete", "Alt-Delete", "Alt-D", "Ctrl-Shift-Delete", "Alt-Shift-Delete"]
+"erase_line" = ["Super-Backspace", "Ctrl-U", "Super-Shift-Backspace"]
+"delete_line_end" = ["Super-Delete", "Super-Shift-Delete"]
+"kill_line_end" = ["Ctrl-K"]
+"delete_line" = ["Ctrl-Shift-D"]
+"newline" = ["Shift-Enter", "Alt-Enter", "Ctrl-J"]
+"undo" = ["Ctrl-Z", "Super-Z", "Ctrl--", "Ctrl-_", "Ctrl-7"]
+"redo" = ["Ctrl-Shift-Z", "Super-Shift-Z", "Ctrl-.", "Ctrl-^", "Ctrl-6"]
+
+[keys.skill]
+"1" = ["Alt-1"]
+"2" = ["Alt-2"]
+"3" = ["Alt-3"]
+"4" = ["Alt-4"]
+"5" = ["Alt-5"]
+"6" = ["Alt-6"]
+"7" = ["Alt-7"]
+"8" = ["Alt-8"]
+"9" = ["Alt-9"]
+
+[descriptions]
+"global.quit" = "Quit after pressing twice; sessions keep running"
+"global.record" = "Record or review a voice note"
+"global.new" = "Choose a project and server for a new agent"
+"global.emoji" = "Open the emoji picker"
+"global.stop" = "Stop the addressed turn"
+"global.status" = "Open or close the status pane"
+"global.copy" = "Copy the selection, draft, or shown question"
+"global.cut" = "Copy and remove the selected draft text"
+"global.prefix" = "Start a prefix action; unset by default"
+"transcript.page_up" = "Scroll the transcript up one page"
+"transcript.page_down" = "Scroll the transcript down one page"
+"transcript.top" = "Read the beginning of the transcript"
+"transcript.bottom" = "Jump to the newest transcript entries"
+"transcript.expand" = "Expand all long replies and calls, or fold them all"
+"list.close" = "Close an opened question's options; never stops the agent"
+"list.up" = "Select the previous list row"
+"list.down" = "Select the next list row"
+"list.left" = "Move to the parent agent or heading"
+"list.right" = "Unfold or move into a heading"
+"list.accept" = "Open the selected agent or toggle the selected heading"
+"list.fold" = "Fold or unfold the selected heading"
+"list.thread" = "Start a fresh thread with the selected resident"
+"list.wider" = "Widen the agents list"
+"list.narrower" = "Narrow the agents list"
+"list.open" = "Open or close the agents list"
+"prefix.next_project" = "Open the next root in the current project"
+"prefix.previous_project" = "Open the previous root in the current project"
+"prefix.left" = "Move left in the agents list"
+"prefix.down" = "Move down in the agents list"
+"prefix.up" = "Move up in the agents list"
+"prefix.right" = "Move right in the agents list"
+"prefix.cancel" = "Cancel the prefix"
+"composer.send" = "Send, queue, answer, or open the selected card"
+"composer.back" = "Leave the current card, answer, split, pane, or pin; otherwise stop"
+"line_start.list" = "Move into the agents list at the start of an editor line"
+"targets.next" = "Select the next click target with an empty draft"
+"targets.previous" = "Select the previous click target with an empty draft"
+"targets.down" = "Select the next click target while browsing"
+"targets.up" = "Select the previous click target while browsing"
+"children.next" = "Open the next child card or sibling split"
+"children.previous" = "Open the previous child card or sibling split"
+"input_history.previous" = "Recall the previous input above the first editor row"
+"input_history.next" = "Recall the next input below the last editor row"
+"queued_input.take_back" = "Withdraw the newest queued input into the draft"
+"attached_images.focus" = "Select the last attached image above the first editor row"
+"question.previous" = "Show the previous waiting question"
+"question.next" = "Show the next waiting question"
+"question.1" = "Answer the shown question with option 1"
+"question.2" = "Answer the shown question with option 2"
+"question.3" = "Answer the shown question with option 3"
+"question.4" = "Answer the shown question with option 4"
+"question.5" = "Answer the shown question with option 5"
+"question.6" = "Answer the shown question with option 6"
+"question.7" = "Answer the shown question with option 7"
+"question.8" = "Answer the shown question with option 8"
+"question.9" = "Answer the shown question with option 9"
+"voice.accept" = "Send the voice note, or retry failed audio"
+"voice.cancel" = "Stop recording for review, discard a held note, or stop playback"
+"picker.speed" = "Switch between effort and speed; arrows choose"
+"picker.up" = "Select the previous model"
+"picker.down" = "Select the next model"
+"picker.left" = "Select the previous effort or speed"
+"picker.right" = "Select the next effort or speed"
+"picker.accept" = "Stage this model, effort and speed for the next input"
+"picker.cancel" = "Close the model chooser"
+"picker.keep" = "Switch models keeping the conversation"
+"picker.handover" = "Switch models starting from a handover note"
+"panel.up" = "Scroll the panel up one row"
+"panel.down" = "Scroll the panel down one row"
+"panel.page_up" = "Scroll the panel up one page"
+"panel.page_down" = "Scroll the panel down one page"
+"panel.top" = "Scroll to the panel beginning"
+"panel.bottom" = "Scroll to the panel end"
+"panel.cancel" = "Close the panel"
+"mcp.up" = "Select the previous MCP server"
+"mcp.down" = "Select the next MCP server"
+"mcp.accept" = "Open the chosen server or confirm an import"
+"mcp.cancel" = "Leave server details or close the MCP panel"
+"mcp.sign_in" = "Sign in to the chosen server"
+"mcp.sign_out" = "Sign out of the chosen server"
+"mcp.reconnect" = "Reconnect the chosen server"
+"mcp.disable" = "Disable the chosen server"
+"mcp.enable" = "Enable the chosen server"
+"mcp.remove" = "Remove the chosen server after a second press"
+"start.up" = "Select the previous project"
+"start.down" = "Select the next project"
+"start.left" = "Select the previous server"
+"start.right" = "Select the next server"
+"start.accept" = "Aim the composer at the selected project and server"
+"start.cancel" = "Close the new agent chooser"
+"start.erase" = "Erase the last filter character"
+"emoji.up" = "Move up in the emoji grid"
+"emoji.down" = "Move down in the emoji grid"
+"emoji.left" = "Move left in the emoji grid or skin tones"
+"emoji.right" = "Move right in the emoji grid or skin tones"
+"emoji.previous_tab" = "Choose the previous emoji category"
+"emoji.next_tab" = "Choose the next emoji category"
+"emoji.accept" = "Insert the selected emoji"
+"emoji.cancel" = "Leave skin tones or close the emoji picker"
+"emoji.close" = "Close the emoji picker directly"
+"emoji.delete" = "Erase the last search character"
+"emoji.tones" = "Show or hide available skin tones"
+"emoji.erase" = "Erase a search character, or delete the preceding draft character"
+"emoji.clear" = "Clear the emoji search"
+"completion.up" = "Select the previous completion"
+"completion.down" = "Select the next completion"
+"completion.accept" = "Complete the selected name"
+"completion.enter" = "Complete a partial name, or run a whole command"
+"completion.space" = "Complete a unique matching name, otherwise insert a space"
+"completion.cancel" = "Hide the completion menu"
+"shortcode.accept" = "Insert an emoji match, or cycle to the next match"
+"shortcode.enter" = "Insert the first emoji match, or send after cycling"
+"shortcode.close" = "Expand a complete shortcode, otherwise insert a colon"
+"shortcode.cancel" = "Hide emoji shortcode suggestions"
+"attachments.left" = "Select the previous image"
+"attachments.right" = "Select the next image"
+"attachments.remove" = "Remove the selected image"
+"attachments.cancel" = "Leave the image tray"
+"editor.left" = "Move one character left"
+"editor.right" = "Move one character right"
+"editor.up" = "Move to the previous wrapped row"
+"editor.down" = "Move to the next wrapped row"
+"editor.word_left" = "Move to the previous word"
+"editor.word_right" = "Move to the next word"
+"editor.line_start" = "Move to the start of the line"
+"editor.line_end" = "Move to the end of the line"
+"editor.visual_start" = "Move to the start of the wrapped row"
+"editor.visual_end" = "Move to the end of the wrapped row"
+"editor.start" = "Move to the start of the draft"
+"editor.end" = "Move to the end of the draft"
+"editor.select_all" = "Select the entire draft"
+"editor.select_left" = "Select text while moving: move one character left"
+"editor.select_right" = "Select text while moving: move one character right"
+"editor.select_up" = "Select text while moving: move to the previous wrapped row"
+"editor.select_down" = "Select text while moving: move to the next wrapped row"
+"editor.select_word_left" = "Select text while moving: move to the previous word"
+"editor.select_word_right" = "Select text while moving: move to the next word"
+"editor.select_line_start" = "Select text while moving: move to the start of the line"
+"editor.select_line_end" = "Select text while moving: move to the end of the line"
+"editor.select_visual_start" = "Select text while moving: move to the start of the wrapped row"
+"editor.select_visual_end" = "Select text while moving: move to the end of the wrapped row"
+"editor.select_start" = "Select text while moving: move to the start of the draft"
+"editor.select_end" = "Select text while moving: move to the end of the draft"
+"editor.erase" = "Delete the selection or preceding character"
+"editor.delete" = "Delete the selection or next character"
+"editor.erase_word" = "Delete the selection or preceding word"
+"editor.delete_word" = "Delete the selection or next word"
+"editor.erase_line" = "Delete the selection or preceding text on this line"
+"editor.delete_line_end" = "Delete the selection or following text on this line"
+"editor.kill_line_end" = "Delete to the line end, joining the next line when already there"
+"editor.delete_line" = "Delete this line and its line break"
+"editor.newline" = "Insert a line break"
+"editor.undo" = "Undo the last edit"
+"editor.redo" = "Redo the last undone edit"
+"skill.1" = "Open the lit skill in slot 1"
+"skill.2" = "Open the lit skill in slot 2"
+"skill.3" = "Open the lit skill in slot 3"
+"skill.4" = "Open the lit skill in slot 4"
+"skill.5" = "Open the lit skill in slot 5"
+"skill.6" = "Open the lit skill in slot 6"
+"skill.7" = "Open the lit skill in slot 7"
+"skill.8" = "Open the lit skill in slot 8"
+"skill.9" = "Open the lit skill in slot 9"

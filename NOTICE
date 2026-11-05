@@ -1,0 +1,48 @@
+The following files contain material from https://github.com/openai/codex,
+revision aa854dabf54e1dd6c2bda80653944b4f2c0672d7.
+Copyright 2025 OpenAI, licensed under the Apache License 2.0 (see LICENSE-APACHE).
+Each file's path is relative to this repository's root; its upstream path, after the colon,
+is relative to the Codex repository root.
+
+src/profiles/typescript.rs: codex-rs/code-mode-protocol/src/json_schema_types.rs
+  Modified: bounded the input's size and recursion depth, merged the intersection case into the union loop, and checked property names without Codex's identifier helper.
+src/profiles/mod.rs: codex-rs/code-mode-protocol/src/description.rs
+  Modified: kept Codex's JavaScript name normalization, exec declaration wrapper and heading forms inside Razor's declaration type.
+src/tools/patch.rs: codex-rs/apply-patch/src/file_update.rs, codex-rs/apply-patch/src/seek_sequence.rs,
+  codex-rs/apply-patch/src/parser.rs and codex-rs/apply-patch/src/streaming_parser.rs
+  Modified: condensed the replacement and line search into borrowed lines that keep each file's line endings, dropped the Unicode punctuation match, and rewrote the parser as one pass over the patch's lines.
+src/profiles/data/gpt.md: codex-rs/models-manager/models.json (GPT-6.1-sol instructions_template)
+  Modified: removed identity, personality, approval, compaction, skills and plugin passages.
+src/profiles/data/exec.md: codex-rs/code-mode-protocol/src/description.rs
+  Modified: adapted the runtime and image helper descriptions and removed unsupported helpers.
+src/profiles/data/exec.lark: codex-rs/core/src/tools/code_mode/execute_spec.rs
+src/profiles/data/wait.md: codex-rs/core/src/tools/code_mode/wait_spec.rs
+src/profiles/data/imagegen.md: codex-rs/ext/image-generation/imagegen_description.md
+  Modified: replaced tool names with placeholders.
+src/profiles/data/image-gen.json: codex-rs/ext/image-generation/src/tool.rs
+  Modified: rendered the tool arguments as a JSON schema and added a namespace heading.
+src/profiles/data/web-run.md: codex-rs/ext/web-search/web_run_description.md
+src/profiles/data/web-run.json: codex-rs/codex-api/src/search.rs
+  Modified: rendered the search arguments as a JSON schema and omitted literature_search_query.
+src/profiles/data/tools.json: codex-rs/core/src/tools/handlers/shell_spec.rs,
+  codex-rs/core/src/tools/handlers/apply_patch_spec.rs, and
+  codex-rs/core/src/tools/handlers/view_image_spec.rs
+  Modified: combined four Codex tool descriptions with Razor's tools and added Razor-specific shell details.
+src/profiles/data/results.json: codex-rs/ext/image-generation/src/artifact.rs
+  Modified: changed placeholders and the final sentence of the image output hint.
+
+Upstream NOTICE:
+
+OpenAI Codex
+Copyright 2025 OpenAI
+
+This project includes code derived from [Ratatui](https://github.com/ratatui/ratatui), licensed under the MIT license.
+Copyright (c) 2016-2022 Florian Dehau
+Copyright (c) 2023-2025 The Ratatui Developers
+
+The "Shared MCP Types" block in src/profiles/data/exec.md restates type declarations from the
+Model Context Protocol schema, https://github.com/modelcontextprotocol/modelcontextprotocol,
+as Codex's description.rs carries them.
+Copyright (c) 2024-2025 Model Context Protocol a Series of LF Projects, LLC.
+Licensed under the MIT License (its text is in LICENSE-MIT) or, for contributions since
+relicensed, the Apache License 2.0 (see LICENSE-APACHE).

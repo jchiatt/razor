@@ -1,0 +1,17 @@
+# The source files every release archive carries at their source paths, beside what the build makes;
+# a folder means every file in it. scripts/release.sh packs them, and published archives are checked against them.
+bridge/main.ts
+bridge/package.json
+bridge/package-lock.json
+bridge/tsconfig.json
+scripts/speech.py
+scripts/notify.sh
+packs/starter
+README.md
+SPEC.md
+RULES.md
+AGENTS.md
+docs
+LICENSE-MIT
+LICENSE-APACHE
+NOTICE

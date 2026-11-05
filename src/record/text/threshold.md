@@ -1,0 +1,1 @@
+Your context is nearly full, so Razor will rebuild it from the record. Call `handover` now with your continuation note: a few lines on the work in hand and the decisions behind it, not a summary of the past, since the past stays in the record and `recall` returns any of it.

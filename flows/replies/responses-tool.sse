@@ -1,0 +1,24 @@
+event: response.created
+data: {"type": "response.created", "response": {"id": "resp_responses-tool", "object": "response", "created_at": 1793152800, "model": "gpt-6.1", "status": "in_progress", "output": [], "store": false, "error": null, "incomplete_details": null}, "sequence_number": 0}
+
+event: response.output_item.added
+data: {"type": "response.output_item.added", "output_index": 0, "item": {"id": "rs_flow", "type": "reasoning", "summary": [], "status": "in_progress", "encrypted_content": "INCOMPLETE_ADDED_DO_NOT_REPLAY"}, "sequence_number": 1}
+
+event: response.output_item.done
+data: {"type": "response.output_item.done", "output_index": 0, "item": {"id": "rs_flow", "type": "reasoning", "summary": [], "status": "completed", "encrypted_content": "COMPLETE_DONE_REPLAY_THIS"}, "sequence_number": 2}
+
+event: response.output_item.added
+data: {"type": "response.output_item.added", "output_index": 1, "item": {"id": "ct_flow", "type": "custom_tool_call", "call_id": "call_flow", "name": "exec", "input": ""}, "sequence_number": 3}
+
+event: response.custom_tool_call_input.delta
+data: {"type": "response.custom_tool_call_input.delta", "output_index": 1, "item_id": "ct_flow", "delta": "console.log(\"flow exec 🪶\")", "sequence_number": 4}
+
+event: response.custom_tool_call_input.done
+data: {"type": "response.custom_tool_call_input.done", "output_index": 1, "item_id": "ct_flow", "input": "console.log(\"flow exec 🪶\")", "sequence_number": 5}
+
+event: response.output_item.done
+data: {"type": "response.output_item.done", "output_index": 1, "item": {"id": "ct_flow", "type": "custom_tool_call", "call_id": "call_flow", "name": "exec", "input": "console.log(\"flow exec 🪶\")"}, "sequence_number": 6}
+
+event: response.completed
+data: {"type": "response.completed", "response": {"id": "resp_responses-tool", "object": "response", "created_at": 1793152800, "model": "gpt-6.1", "status": "completed", "output": [{"id": "rs_flow", "type": "reasoning", "summary": [], "status": "completed", "encrypted_content": "COMPLETE_DONE_REPLAY_THIS"}, {"id": "ct_flow", "type": "custom_tool_call", "call_id": "call_flow", "name": "exec", "input": "console.log(\"flow exec 🪶\")"}], "store": false, "error": null, "incomplete_details": null, "usage": {"input_tokens": 10, "output_tokens": 20, "input_tokens_details": {"cached_tokens": 0}, "output_tokens_details": {"reasoning_tokens": 1}}}, "sequence_number": 7}
+

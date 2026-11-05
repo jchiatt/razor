@@ -1,0 +1,14 @@
+{
+  "name": "razor-bridge",
+  "private": true,
+  "license": "MIT OR Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.317",
+    "@modelcontextprotocol/sdk": "1.32.2"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "26.6.5"
+  }
+}

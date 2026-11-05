@@ -1,0 +1,76 @@
+# The text of residents, deliveries and the service: what the model or the person reads, and the
+# files `razor install` writes (RULES.md 16). `{name}` is filled in.
+
+ask = "When you have the result, end by asking the person about it with `message`, type `question`, `to` `parent` (your parent is the person)."
+notify = "When you have the result, end by sending it to the person with `message`, type `note`, `to` `parent` (your parent is the person)."
+option = "\n{n}. {option}"
+identity_heading = "## Your identity record\n\nThis is `{path}`, yours to keep current: edit it with your file tools when something in it changes, and each edit is recorded as your own call."
+identity_thread = "This session is one of your threads, with a fresh context: your home session, whose id is the id in your identity record, keeps the project's state note, so do not write one here; rulings, facts and notes are yours to write. When the person closes this thread with `/done`, send your home session, in place of a state note, a note with `message` (to the id in your identity record): what happened here and what it should keep. The thread starts named for you and a random word: once its subject is clear, rename it in a few words with the `agent` tool's `name` action, so the person can find it again."
+identity = """
+# The identity record of resident {name}. Each key is yours to keep current.
+id = "{name}"
+display_name = "{name}"
+role = ""
+authority = ""
+values = []
+relationships = []
+operating_patterns = []
+version = 1
+# Who may change this record besides you.
+changed_by = ["the person"]
+"""
+unreadable = "{path} cannot be read ({why}); fix it so your identity record returns."
+too_large = "{path} is over 64 KiB, so it is left out; shorten it."
+unparsed = "{path} does not parse as TOML ({why}), so it is left out; fix it."
+schedule_failed = "Resident {name}'s schedule {schedule} failed: {why}."
+schedule_stopped = "Resident {name}'s schedule {schedule} was stopped or withdrawn."
+no_resident = "There is no resident {name} in the config."
+no_schedule = "Resident {name} has no schedule {schedule}."
+no_project = "There is no project {id}; choose one from the resident's projects."
+project_name = "A project's name is one line of at most 80 characters, with a letter or digit."
+day = "Your night began. Before your context is rebuilt: record what today taught you as facts, each with a description; where two memories say the same thing, replace them with one; replace any fact today proved wrong; close the tasks you finished, with their evidence, and make sure every promise you made today is a task with a due date; then rewrite this project's state note. Never retire or replace one of the person's rulings. Below are your threads and fresh runs active since your last night, each with its id, its name if it has one, and the first line of its last reply, and then your memories, newest first; keep what matters from both."
+never_arrived = "The run's input never reached its thread."
+other = "Razor failed while {context}: {source}."
+deliver_input = "The `deliver` call does not fit its input: {why}."
+deliver_line = "`line` is one line for the person, at most 2,000 characters."
+deliver_one = "`deliver` takes exactly one of `path` or `url`."
+deliver_file = "{path} is not a regular file of at most 64 MiB."
+deliver_url = "`url` is an http or https link of at most 2,048 characters."
+# A stop signals the server alone, as launchd does: it outlives the bridge, so its open turns stay
+# open and resume at the next start, and jobs it started live on for that start to take back.
+unit = """
+[Unit]
+Description=Razor
+
+[Service]
+ExecStart="{command}"
+Environment="PATH={path}" "RAZOR_HOME={home}"
+KillMode=process
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=default.target
+"""
+plist = """
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>{label}</string>
+  <key>ProgramArguments</key><array><string>{command}</string></array>
+  <key>EnvironmentVariables</key><dict>
+    <key>PATH</key><string>{path}</string>
+    <key>RAZOR_HOME</key><string>{home}</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>ThrottleInterval</key><integer>60</integer>
+  <key>StandardErrorPath</key><string>{home}/server.log</string>
+</dict>
+</plist>
+"""
+boot = "Razor's service is in {file} and running: it starts at boot, and again within a minute of a failure."
+login = "Razor's service is in {file} and running: it starts when you log in, and again within a minute of a failure. On Linux, `loginctl enable-linger` makes it start at boot."
+taken = "{file} runs the server of another Razor home, so it is left alone; give this home a folder of another name."
+no_manager = "No user service manager enabled Razor, so {file} was removed; your next Razor command starts a detached server."

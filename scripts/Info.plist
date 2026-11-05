@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Razor.app, which the macOS service starts first (src/launcher.rs). macOS keys a permission
+     granted to "Razor" to this identifier and the bundle's signature; never change it, or every
+     grant is lost. -->
+<plist version="1.0">
+<dict>
+  <key>CFBundleIdentifier</key><string>com.treygoff.razor.server</string>
+  <key>CFBundleName</key><string>Razor</string>
+  <key>CFBundleExecutable</key><string>Razor</string>
+</dict>
+</plist>

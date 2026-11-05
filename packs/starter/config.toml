@@ -1,0 +1,97 @@
+# The starter pack: the settings a new Razor install starts from (docs/design/starter.md).
+#
+# Razor reads this file beneath your own ~/.razor/config.toml, and yours wins key by key, so change
+# a setting by writing it in your file, never here: an upgrade replaces this folder. Each line that
+# starts with `#` below is an example, off until you copy it into your file without the `#`. Razor
+# rereads both files when you save them; nothing here needs a restart.
+
+# What every conversation is told at its start, in order: this pack's persona.md, Razor's own text,
+# your ~/.razor/about.md if you wrote one, the project's AGENTS.md and CLAUDE.md files, then
+# this pack's rules.md. To change it, copy the list into your file and persona.md and rules.md
+# beside your file, where they are yours to edit: a relative path counts from the file naming it.
+startup = ["persona.md", "razor", "about", "project", "rules.md"]
+
+# The notes and questions agents send you, as desktop notifications: osascript on macOS,
+# notify-send on Linux, nothing on a machine with neither, such as a server with no screen. On
+# macOS they come from Script Editor, which you may have to allow once in System Settings.
+notify = ["../../scripts/notify.sh"]
+ask = ["../../scripts/notify.sh"]
+# To your phone instead, through ntfy (https://ntfy.sh): install its app, subscribe to a topic no
+# one could guess, and put that topic in both lines. A question still waits for your answer here.
+# notify = ["curl", "-fsS", "-o", "/dev/null", "https://ntfy.sh/your-unguessable-topic", "--data-raw"]
+# ask = ["curl", "-fsS", "-o", "/dev/null", "https://ntfy.sh/your-unguessable-topic", "--data-raw"]
+
+# Replies read aloud (the ▶ beside the newest reply) and short voice notes from agents, through
+# ElevenLabs while ELEVENLABS_API_KEY is set (`razor keys` stores it); without the key, each one
+# says how to add it. macOS plays them with afplay; Linux needs `play`, below.
+speech = ["../../scripts/speech.py"]
+# play = ["ffplay", "-nodisp", "-autoexit", "-loglevel", "error", "-af", "atempo={rate}"]
+
+# Voice notes you record (Ctrl-R in the terminal) need a microphone program and a transcriber, a
+# program that turns a recording into words; Razor ships no transcriber. The microphone, with ffmpeg:
+# capture = ["ffmpeg", "-nostdin", "-f", "avfoundation", "-i", "none:default", "-ac", "1", "-ar", "16000", "-f", "s16le", "pipe:1"]
+# capture = ["ffmpeg", "-nostdin", "-f", "pulse", "-i", "default", "-ac", "1", "-ar", "16000", "-f", "s16le", "pipe:1"]
+# transcribe = ["/path/to/your/transcriber"]
+# The first `capture` is for macOS, the second for Linux with PulseAudio or PipeWire.
+
+# The model and effort new sessions start on; setup writes model = "sol" when you choose ChatGPT
+# alone. Claude: opus, sonnet, haiku, fable. ChatGPT: sol, terra, luna, astra. Effort: low, medium,
+# high, xhigh, max.
+# model = "opus"
+# effort = "high"
+
+# Web search, page reading and cited answers through Exa, Parallel and Firecrawl, tried in this
+# order. A provider is used only while its key is set (`razor keys` stores EXA_API_KEY,
+# PARALLEL_API_KEY and FIRECRAWL_API_KEY); with none, agents have only their model's own web tools.
+[web]
+search = ["exa", "parallel", "firecrawl"]
+fetch = ["firecrawl", "exa", "parallel"]
+answer = ["exa", "parallel"]
+
+# Live calls from the phone: names the voice should hear, such as the people, products and places
+# you mention, so it writes them down right.
+# [live]
+# names = ["Ada", "Razor", "Lisbon"]
+
+# Razor refuses an agent's command that would delete files its session did not create. To allow it:
+# [guards]
+# delete = false
+
+# How many children one session may have at once, and how long a child that stopped without
+# reporting is given before Razor asks it to finish.
+# [children]
+# max = 20
+# grace = "3m"
+
+# Another model, any server that speaks OpenAI-compatible chat, here one on this machine. Start
+# a session on it with `razor --model local`. `window` is its context size in tokens.
+# [models.local]
+# base_url = "http://127.0.0.1:1234/v1"
+# id = "the-model-the-server-loaded"
+# window = 32768
+
+# An MCP server's tools for every session; `razor mcp add` writes these for you.
+# [mcp.files]
+# command = "npx"
+# args = ["-y", "@modelcontextprotocol/server-filesystem", "/home/you/notes"]
+
+# A resident: an agent that runs as a service in its own folder, here ~/scout (make it first), and
+# wakes at set times; this one sends you a note at eight on weekdays. `razor install` keeps Razor
+# running in the background.
+# [residents.scout]
+# cwd = "~/scout"
+# [residents.scout.schedules.morning]
+# at = ["08:00"]
+# days = ["mon", "tue", "wed", "thu", "fri"]
+# text = "Find the three news stories from the last day that matter most to my work."
+# deliver = "notify"
+
+# A plugin: a command that sees each tool call first and may allow, change or refuse it.
+# [[plugins]]
+# file = "/home/you/razor-hooks/check-calls"
+# before = ["call"]
+
+# The terminal without animation, or with half blocks for fonts that lack octants.
+# [ui]
+# motion = false
+# blocks = "half"

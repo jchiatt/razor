@@ -1,0 +1,2 @@
+ready = "The meeting's final transcript is ready: {transcript} ({duration} seconds, speakers: {names}). Write the notes: a short summary, the decisions, and the action items with their owners. The person reads them on their phone."
+failed = "The meeting's final transcript failed at {step}: {error}. Write the notes from the live transcript (`meetrec live {folder}`), and say they come from it."

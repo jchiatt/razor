@@ -1,0 +1,12 @@
+{
+  "facts": "# This session\n\n- Name: {name} (session id {session})\n- Date: {date}\n- Time: {time}\n- Machine: {machine}\n- Folder: {folder}",
+  "branch": "\n- Git branch: {branch}",
+  "project": "Contents of {path}:",
+  "skipped": "\n- Left out of your startup list: {path} ({why}).",
+  "large": "it is over 64 KiB",
+  "full": "the list passed 1 MiB",
+  "title": "# What this conversation was sent ahead of its first input\n\nWritten when it opened or its context was rebuilt, replacing the last. Sizes are in bytes, about four to a token.",
+  "prompt": "## The system prompt ({size} bytes)",
+  "tools": "## The tools ({size} bytes as sent)",
+  "page": "## The first input, ahead of the words it carries ({size} bytes)"
+}

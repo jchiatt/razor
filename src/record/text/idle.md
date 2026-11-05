@@ -1,0 +1,1 @@
+Your session reached its idle handover time. Call `handover` now with your continuation note: a few lines on the work in hand and the decisions behind it. The past stays in the record, and `recall` returns any of it.

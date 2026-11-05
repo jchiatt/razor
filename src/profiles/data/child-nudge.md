@@ -1,0 +1,1 @@
+You ended your turn without finish and nothing you started is still running. If you are done, call finish with your report; if you need an answer from someone, ask your parent as a question.

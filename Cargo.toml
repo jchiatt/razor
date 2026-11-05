@@ -1,0 +1,48 @@
+[package]
+name = "razor-harness"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91"
+description = "Razor: a harness for AI agents."
+license = "MIT OR Apache-2.0"
+publish = false
+default-run = "razor"
+
+[[bin]]
+name = "razor"
+path = "src/main.rs"
+
+# The program of Razor.app, which the macOS service starts first (src/residents/install.rs).
+[[bin]]
+name = "razor-launcher"
+path = "src/launcher.rs"
+
+[dependencies]
+crossterm = { version = "0.29", features = ["event-stream", "use-dev-tty"] }
+jiff = "0.2"
+pulldown-cmark = { version = "0.13", default-features = false }
+ratatui = { version = "0.30", default-features = false, features = ["crossterm"] }
+unicode-segmentation = "1"
+unicode-width = "0.2"
+aws-lc-rs = { version = "1.18.2", default-features = false, features = ["aws-lc-sys"] }
+axum = { version = "0.8.9", default-features = false, features = ["http1", "tokio", "json", "query", "ws"] }
+base64 = "0.23.1"
+futures-util = { version = "0.3.34", default-features = false }
+http-range = "0.1.6"
+libc = "0.2.191"
+memchr = "2"
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "query", "form", "rustls", "stream", "http2"] }
+rquickjs = { version = "=0.14.0", default-features = false, features = ["std"] }
+rmcp = { version = "3.8.0", default-features = false, features = ["client", "transport-child-process", "auth", "transport-streamable-http-client-reqwest"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1.0.154", features = ["raw_value"] }
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "macros", "process", "fs", "io-util", "net", "sync", "signal", "time", "io-std"] }
+tokio-tungstenite = { version = "=0.29.0", default-features = false, features = ["connect", "rustls-tls-native-roots"] }
+tokio-util = { version = "0.7.20", features = ["io"] }
+toml = { version = "1.1.8", default-features = false, features = ["parse", "serde"] }
+vt100 = { version = "0.18.1", default-features = false }
+toml_edit = { version = "0.25", features = ["serde"] }
+async-trait = "0.1"
+
+[profile.release]
+strip = "debuginfo"

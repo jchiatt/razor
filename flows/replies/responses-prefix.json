@@ -1,0 +1,8 @@
+{
+  "model": "gpt-6.1-sol",
+  "profile": "aa854dab-razor-7-gpt-code-web-000",
+  "sha256": "021bcc89966a966367da6810bba8c00638df84bcc7e4f1aa071d8af549bd9aff",
+  "tokens_upper_bound": 9628,
+  "response_id": "resp_00000000000000000000000000000000000000000000000000",
+  "source": "docs/design/code-mode.md"
+}

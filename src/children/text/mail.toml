@@ -1,0 +1,7 @@
+# What the model reads on Post's doorbell and a video watcher's failure (RULES.md 16); `{from}`,
+# `{channel}`, `{id}`, `{name}` and `{error}` are filled in.
+post_mail = "{from} on Post: "
+post_mention = "{from} on Post in #{channel}: "
+post_read = " (post read {id})"
+post_chat = " (post chat {channel})"
+watch_failed = "Your helper {name} could not start to watch the video: {error}"

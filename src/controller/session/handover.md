@@ -1,0 +1,1 @@
+The context will be rebuilt from the record once every call of this message has its result, and you continue in it with your continuation note.
